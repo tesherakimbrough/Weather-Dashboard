@@ -3,7 +3,7 @@
 A simple, responsive weather dashboard built using the Open-Meteo API.
 
 ### 🔗 Live Site:
-[https://tesherakimbrough.github.io/weather-dashboard](https://tesherakimbrough.github.io/weather-dashboard)
+[https://tesherakimbrough.github.io/Weather-Dashboard](https://tesherakimbrough.github.io/Weather-Dashboard)
 
 ## 🚀 Features
 - View temperature and weather conditions for any city

@@ -1,21 +1,20 @@
-# Weather Dashboard
+# Weather Dashboard 🌦️
 
-A simple weather dashboard showing temperature and weather conditions using Open-Meteo API.
+A simple, responsive weather dashboard built using the Open-Meteo API.
 
-## Setup Instructions
+### 🔗 Live Site:
+[https://tesherakimbrough.github.io/weather-dashboard](https://tesherakimbrough.github.io/weather-dashboard)
+
+## 🚀 Features
+- View temperature and weather conditions for any city
+- Dynamic geocoding and weather data using Open-Meteo APIs
+- Modular, clean HTML/CSS/JS structure
+- Weather icons based on real-time conditions ☀️ 🌧️ ⛈️
+- Fully deployable via GitHub Pages
+
+## 🛠️ Setup
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/tesherakimbrough/weather-dashboard.git
    cd weather-dashboard
-
-
-2. Open `index.html` in your browser to start.
-
-## Features
-- View temperature and conditions for New York
-- Navigation between temperature and condition pages
-- Modular code structure
-
-## Credits
-- Data from [Open-Meteo](https://open-meteo.com)

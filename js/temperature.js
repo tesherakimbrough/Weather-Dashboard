@@ -1,14 +1,28 @@
 import { fetchWeatherData } from './api.js';
 
-window.addEventListener('DOMContentLoaded', async () => {
-  const data = await fetchWeatherData();
+function renderTemperature(city, temp, unit) {
   const container = document.getElementById('temp-data');
+  container.innerHTML = `
+    <p>City: ${city}</p>
+    <p>Temperature: ${temp} °${unit === 'fahrenheit' ? 'F' : 'C'}</p>
+    <button id="toggle-unit">Switch to ${unit === 'fahrenheit' ? 'Celsius' : 'Fahrenheit'}</button>
+  `;
+  document.getElementById('toggle-unit').addEventListener('click', () => {
+    const newUnit = unit === 'fahrenheit' ? 'celsius' : 'fahrenheit';
+    loadWeather(newUnit);
+  });
+}
+
+async function loadWeather(unit = 'fahrenheit') {
+  const city = localStorage.getItem('selectedCity') || 'New York';
+  const data = await fetchWeatherData(city, unit);
   if (data) {
-    const temp = data.current_weather.temperature;
-    container.innerHTML = `
-      <p>Temperature: ${temp} °C</p>
-    `;
+    renderTemperature(city, data.current_weather.temperature, unit);
   } else {
-    container.innerHTML = '<p>Error fetching temperature data.</p>';
+    document.getElementById('temp-data').innerHTML = '<p>Error fetching temperature data.</p>';
   }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  loadWeather();
 });

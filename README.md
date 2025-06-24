@@ -16,5 +16,5 @@ A simple, responsive weather dashboard built using the Open-Meteo API.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/tesherakimbrough/weather-dashboard.git
+   git clone https://github.com/tesherakimbrough/Weather-Dashboard.git
    cd weather-dashboard

@@ -8,10 +8,30 @@
 </head>
 <body>
   <h1>Weather Dashboard</h1>
+
+  <form id="location-form">
+    <input type="text" id="city" placeholder="Enter city name" required />
+    <button type="submit">Get Weather</button>
+  </form>
+
   <nav>
     <a href="temperature.html">View Temperature</a>
     <a href="conditions.html">View Conditions</a>
   </nav>
+
   <p>Welcome! Choose a category above to see the weather.</p>
+
+  <script type="module">
+    document.getElementById('location-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const city = document.getElementById('city').value.trim();
+      if (city) {
+        localStorage.setItem('selectedCity', city);
+        window.location.href = 'temperature.html';
+      } else {
+        alert("Please enter a city name.");
+      }
+    });
+  </script>
 </body>
 </html>
